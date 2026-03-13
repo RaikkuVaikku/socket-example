@@ -1,6 +1,6 @@
 import socket
 import random
-from #filename where you have the Hasher class import Hasher
+from hash import Hasher
 
 class Server:
     def __init__(self):
@@ -35,6 +35,7 @@ class Server:
              buffer = #?.?(1024)
              data = buffer.decode().strip()
              message = self.packetaddress[data]
+             sent_message = simulated_attack(message)
              #Get the hash of the message with the hasher
              messagehash = self.hasher.hash_message(message)
              complete_message = message + self.delimiter + messagehash
